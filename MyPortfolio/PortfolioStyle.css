@@ -1,0 +1,284 @@
+:root {
+  --gradient: linear-gradient(
+    to right top,
+    #f81919,
+    #fe0436,
+    #ff004f,
+    #ff0f65,
+    #fd237b,
+    #f542a8,
+    #e161cf,
+    #c37cef,
+    #77a4ff,
+    #00c2ff,
+    #00d8ff,
+    #37e8e8
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.navbar a,
+.email-link a {
+  color: white;
+  text-align: center;
+  padding: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+section {
+  padding: 128px 100px;
+  position: relative;
+  width: 100%;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+}
+.greeting-text {
+  font-size: 32px;
+  line-height: 80px;
+}
+.name-text {
+  font-size: 128px;
+  line-height: 110px;
+  letter-spacing: normal;
+}
+.hero-description-text {
+  font-size: 18px;
+}
+.designer-text,
+#Contact h2,
+.navbar a:hover,
+.quote,
+.copyright {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.developer-text {
+  color: #12eb1a;
+}
+hr {
+  width: 768px;
+  height: 0px;
+  margin: 64px 0;
+  position: absolute;
+  color: #383535;
+  opacity: 0.2;
+}
+.left {
+  right: 0;
+}
+.right {
+  left: 0;
+}
+.about-container {
+  display: flex;
+  gap: 64px;
+}
+.about-me {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+h2 {
+  font-size: 64px;
+  font-family: "Lora", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+.about-description,
+.skill-description {
+  line-height: 22px;
+}
+img {
+  width: 486px;
+  height: 317px;
+}
+.skill-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tags-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px;
+}
+.tag {
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: 1px solid #00c2ff;
+  text-align: center;
+}
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  margin-top: 64px;
+}
+.cta-container h2{
+  font-weight: 700;
+}
+.email-link {
+  margin-top: 32px;
+  padding: 24px 16px;
+  border: 1px solid #00c2ff;
+  border-radius: 16px;
+  width: max-content;
+  cursor: pointer;
+}
+.email-link:hover {
+  background-color: #00c2ff;
+  font-weight: 700;
+  border: none;
+}
+.footer-container {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  font-size: 14px;
+  font-weight: 800;
+}
+#top-button {
+  z-index: 1000;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+}
+#top-button:hover {
+  background-color: #00c2ff;
+  color: white;
+}
+
+/* Media Qureies */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    padding: 64px 50px;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+  .about-me {
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-container {
+    flex-direction: column-reverse;
+    gap: 64px;
+  }
+  hr {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+    font-size: 12px;
+  }
+  section {
+    padding: 32px 25px;
+  }
+  .hero-container {
+    gap: 16px;
+  }
+  .greeting-text {
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .name-text {
+    font-size: 64px;
+    line-height: 56px;
+  }
+  hr {
+    display: none;
+  }
+  .hero-description-text {
+    font-size: 12px;
+  }
+  img {
+    display: none;
+  }
+  .about-me {
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-container {
+    flex-direction: column-reverse;
+    gap: 64px;
+  }
+  .tags-container {
+    grid-template-columns: auto auto;
+  }
+  h2 {
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 32px;
+  }
+  .skill-text-container {
+    text-align: center;
+  }
+  .skill-description {
+    margin-top: 16px;
+  }
+  .gap {
+    padding: 8px 16px;
+  }
+  .cta-container {
+    margin-top: 0px;
+  }
+  footer {
+    font-size: 9px;
+  }
+  #top-button {
+    display: none;
+  }
+}
